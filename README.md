@@ -1,3 +1,11 @@
+# MyPortfolio
+My portfolio website
+
+[Design System](https://xd.adobe.com/view/a7af9364-9671-4278-96a0-b5e1b6f3b690-f2fc/)
+[Live Site](https://isaiahdavis.com/)
+
+<!--
+
 ## Create-React-App-Lambda
 
 This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
@@ -106,3 +114,5 @@ For a full demo of routing and authentication, check this branch: https://github
 ## Service Worker
 
 `create-react-app`'s default service worker (in `src/index.js`) does not work with lambda functions out of the box. It prevents calling the function and returns the app itself instead ([Read more](https://github.com/facebook/create-react-app/issues/2237#issuecomment-302693219)). To solve this you have to eject and enhance the service worker configuration in the webpack config. Whitelist the path of your lambda function and you are good to go.
+
+-->

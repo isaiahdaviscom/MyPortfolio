@@ -3,9 +3,13 @@
   "version": "0.5.0",
   "private": true,
   "dependencies": {
+    "@data-provider/axios": "^4.1.0",
     "axios": "^0.19.0",
+    "markdown-to-jsx": "^7.1.6",
+    "netlify-cms-app": "^2.15.66",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "^3.0.1"
   },
   "scripts": {

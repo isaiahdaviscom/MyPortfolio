@@ -5,6 +5,11 @@ My portfolio website
 [Live Site](https://isaiahdavis.com/)
 
 <!--
+Issue:
+Failed retrieving user account: Unauthorized. Double-check your login status with 'netlify status' or contact support with details of your error.
+
+Resolution:
+
 
 ## Create-React-App-Lambda
 

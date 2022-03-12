@@ -1,0 +1,46 @@
+p {
+  margin: 0;
+}
+
+.home {
+  background: #eeeeee;
+  height: 100%;
+  width: 100%;
+}
+.title {
+  text-align: center;
+}
+.module {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.social a {
+  display: block;
+  flex: 1 1 auto;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.social a:hover {
+  background: #f2e936;
+}
+
+@media all and (max-width: 728px) {
+  .home {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: src/assets
+public_folder: /assets
+collections:
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page" # Used in the UI, ie: "New Post"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false}
+      - { label: "Cover", name: "cover", widget: "image", required: false}
+      - { label: "Tags", name: "tags", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown"}
+  - label: "Audio"
+    name: "audio"
+    widget: "file"
+    default: "/uploads"
+    media_library:
+      config:
+        multiple: true
+
+

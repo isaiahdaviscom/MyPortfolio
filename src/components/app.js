@@ -12,6 +12,9 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
+import Header from './header';
+import Footer from './footer';
+
 // class LambdaDemo extends Component {
 //   constructor(props) {
 //     super(props)
@@ -41,17 +44,25 @@ import NotFoundPage from '../routes/notfound';
 //   }
 // }
 
+
 export default class App extends Component {
-  render() {
+  handleRoute = e => {
+    this.currentUrl = e.url;
+    console.log(e)
+  };
+  render(props) {
+    console.log(props);
     return (
       <div className="App">
-        <Routes>
+        <Header />
+        <Routes onChange={this.handleRoute}>
           <Route path="*" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact-success" element={<ContactSuccess />} />
           <Route path="/404" element={<NotFoundPage />} />
         </Routes>
+        <Footer />
       </div>
     )
   }

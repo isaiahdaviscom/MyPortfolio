@@ -1,4 +1,5 @@
 # MyPortfolio
+
 My portfolio website
 
 [Design System](https://xd.adobe.com/view/a7af9364-9671-4278-96a0-b5e1b6f3b690-f2fc/)
@@ -9,12 +10,9 @@ Issue:
 Failed retrieving user account: Unauthorized. Double-check your login status with 'netlify status' or contact support with details of your error.
 
 Resolution:
-
-
 ## Create-React-App-Lambda
 
 This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
-
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
 

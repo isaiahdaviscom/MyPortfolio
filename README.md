@@ -1,5 +1,4 @@
 # MyPortfolio
-My portfolio website
 
 [Design System](https://xd.adobe.com/view/a7af9364-9671-4278-96a0-b5e1b6f3b690-f2fc/)
 [Live Site](https://isaiahdavis.com/)

@@ -4,14 +4,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+// 
 import Home from '../routes/home';
 import Blogs from '../routes/blogs';
 // import Blog from '../routes/blog';
 import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
-
+// 
 import Header from './header';
 import Footer from './footer';
 

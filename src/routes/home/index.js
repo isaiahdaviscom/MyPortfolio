@@ -1,7 +1,14 @@
+// React
 import React, { useEffect } from "react";
 import style from "./style.module.css";
-
-// import Social from "../../components/social-badges";
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import Badge from "react-bootstrap/Badge";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+// Custom
+import Social from "../../components/social-badges";
 // import Slides from "../../components/slides";
 // import Projects from "../../components/projects";
 
@@ -26,85 +33,80 @@ const Home = () => {
 
   return (
     <div className={style.home}>
-      <div style={{ textAlign: "center" }} className={style.module}>
-        <h1 className={style.title}>Coming Soon</h1>
-        <img
-          style={{ width: "144px" }}
-          src="images/profile-branded.png"
-          alt="Avatar"
-        />
-        <h4>
-          Visual Designer <span style={{ color: "#aaaaaa" }}>&amp;</span>{" "}
-          Front-end Developer
-        </h4>
-        {/* <Social></Social> */}
-        <div className={style.social} style={{ display: "flex" }}>
-          <a
-            href="https://www.linkedin.com/in/isaiahdavis/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              style={{ height: "36px" }}
-              src="/vendors/fontawesome/linkedin-brands.svg"
-              alt="My Linkedin profile"
-            />
-            <p>
-              <small>Linkedin</small>
-            </p>
-          </a>
-          <a
-            href="https://github.com/isaiahdaviscom"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              style={{ height: "36px" }}
-              src="/vendors/fontawesome/github-square-brands.svg"
-              alt="My GitHub profile"
-            />
-            <p>
-              <small>Github</small>
-            </p>
-          </a>
-          <a
-            href="https://www.behance.net/isaiahdavism"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              style={{ height: "36px" }}
-              src="/vendors/fontawesome/behance-square-brands.svg"
-              alt="My Adobe Behance profile"
-            />
-            <p>
-              <small>Behance</small>
-            </p>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1S7ECDIgC9sbxiVAXiDCN8XdaxfYVfkFO/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              style={{ height: "36px" }}
-              src="/vendors/fontawesome/file-word-regular.svg"
-              alt="My Résumé"
-            />
-            <p>
-              <small>R&eacute;sum&eacute;</small>
-            </p>
-          </a>
-        </div>
-        <div style={{ display: "none" }}>
-          <h3>Projects</h3>
-          <div style={{ display: "flex" }}>
-            <div>image</div>
-            <div>title</div>
-          </div>
-        </div>
-      </div>
-      {/* <Slides data={Projects.projects}></Slides> */}
+      <main>
+        <section>
+          <Container>
+            <h2 className="display-4">
+              Hi, I’m a <a href="">UX/UI Designer</a> and{" "}
+              <a href="">Frontend Developer</a>
+            </h2>
+            <p>Currently living in Chicago, IL</p>
+            <p>Available for freelance starting in Q4 2022</p>
+            {/* <Slides data={Projects.projects}></Slides> */}
+          </Container>
+        </section>
+        <section className="bg-light">
+          <Container>
+            <Row xs={1} md={2} className="g-4 m-0">
+              <a href="">
+                <Col>
+                  <Card>
+                    <Card.Img variant="top" src=""></Card.Img>
+                    <Card.Body>
+                      <Card.Title>S&amp;C Electric Company</Card.Title>
+                      <Card.Text>
+                        A global provider of equipment and services for electric
+                        power systems.
+                      </Card.Text>
+                      <Badge bg="primary">UX/UI Design</Badge>{" "}
+                      <Badge bg="primary">Web Design</Badge>{" "}
+                      <Badge bg="primary">Frontend Development</Badge>{" "}
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </a>
+              <a href="">
+                <Col>
+                  <Card>
+                    <Card.Img variant="top" src=""></Card.Img>
+                    <Card.Body>
+                      <Card.Title>IGA</Card.Title>
+                      <Card.Text>This is the card.</Card.Text>
+                      <Badge bg="primary">UX/UI Design</Badge>{" "}
+                      <Badge bg="primary">Web Design</Badge>{" "}
+                      <Badge bg="primary">Frontend Development</Badge>{" "}
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </a>
+              <a href="">
+                <Col>
+                  <Card>
+                    <Card.Img variant="top" src=""></Card.Img>
+                    <Card.Body>
+                      <Card.Title>Shopify</Card.Title>
+                      <Card.Text>This is the card.</Card.Text>
+                      <Badge bg="primary">UX/UI Design</Badge>{" "}
+                      <Badge bg="primary">Web Design</Badge>{" "}
+                      <Badge bg="primary">Frontend Development</Badge>{" "}
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </a>
+            </Row>
+          </Container>
+        </section>
+      </main>
+      <footer>
+        <Container>
+          <Row>
+            <Col>
+              <Social></Social>
+            </Col>
+          </Row>
+          <small>Made with Bootstrap</small>
+        </Container>
+      </footer>
     </div>
   );
 };

@@ -1,21 +1,5 @@
-p {
-  margin: 0;
-}
-
-.home {
-  background: #eeeeee;
-  height: 100%;
-  width: 100%;
-}
 .title {
   text-align: center;
-}
-.module {
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .social {
@@ -39,8 +23,22 @@ p {
   background: #f2e936;
 }
 
-@media all and (max-width: 728px) {
-  .home {
-    padding: 16px;
-  }
+body {
+  --content-width: 100%;
+  --line-color: #0000001a;
+  /* --line-color: #000000; */
+  --line-width: 1px;
+  background:
+    /* Vertical Line 1 */
+    linear-gradient(90deg, transparent, transparent calc(50vw - var(--content-width) / 2), var(--line-color) calc(50vw - var(--content-width) / 2), var(--line-color) calc(50vw - var(--content-width) / 2 + var(--line-width)), transparent calc(50vw - var(--content-width) / 2 + var(--line-width)), transparent),
+    /* Vertical Line 5 */
+    linear-gradient(90deg, transparent, transparent calc(50vw + var(--content-width) / 2 - var(--line-width)), var(--line-color) calc(50vw + var(--content-width) / 2 - var(--line-width)), var(--line-color) calc(50vw + var(--content-width) / 2 - var(--line-width) + var(--line-width)), transparent calc(50vw + var(--content-width) / 2 - var(--line-width) + var(--line-width)), transparent),
+    /* Horizontal repeating lines to create the dashed experience of the 3 center vertical lines */
+    repeating-linear-gradient(180deg, transparent, transparent 6px, #fff 6px, #fff calc(6px + var(--line-width) * 2)),
+    /* Vertical Line 2 */
+    linear-gradient(90deg, transparent, transparent calc(50vw - var(--content-width) / 4 - var(--line-width) / 4), var(--line-color) calc(50vw - var(--content-width) / 4 - var(--line-width) / 4), var(--line-color) calc(50vw - var(--content-width) / 4 - var(--line-width) / 4 + var(--line-width)), transparent calc(50vw - var(--content-width) / 4 - var(--line-width) / 4 + var(--line-width)), transparent),
+    /* Vertical Line 3 */
+    linear-gradient(90deg, transparent, transparent calc(50vw - var(--line-width) / 2), var(--line-color) calc(50vw - var(--line-width) / 2), var(--line-color) calc(50vw + var(--line-width) - var(--line-width) / 2), transparent calc(50vw + var(--line-width) - var(--line-width) / 2), transparent),
+    /* Vertical Line 4 */
+    linear-gradient(90deg, transparent, transparent calc(50vw + var(--content-width) / 4 - var(--line-width) / 2), var(--line-color) calc(50vw + var(--content-width) / 4 - var(--line-width) / 2), var(--line-color) calc(50vw + var(--content-width) / 4 - var(--line-width) / 2 + var(--line-width)), transparent calc(50vw + var(--content-width) / 4 - var(--line-width) / 2 + var(--line-width)), transparent);
 }

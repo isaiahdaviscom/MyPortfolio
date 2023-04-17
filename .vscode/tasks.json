@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build:app",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build:app",
+			"detail": "react-scripts build"
+		},
+		{
+			"type": "npm",
+			"script": "npm serve -s build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "serve -s build",
+			"detail": "serve -s build"
+		}
+	]
+}

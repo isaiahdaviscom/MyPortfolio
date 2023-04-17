@@ -1,9 +1,15 @@
 # MyPortfolio
-<<<<<<< HEAD
 
-My portfolio website
-=======
->>>>>>> master
+- [MyPortfolio](#myportfolio)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 [Design System](https://xd.adobe.com/view/a7af9364-9671-4278-96a0-b5e1b6f3b690-f2fc/)
 [Live Site](https://isaiahdavis.com/)
@@ -14,10 +20,6 @@ Issue:
 Failed retrieving user account: Unauthorized. Double-check your login status with 'netlify status' or contact support with details of your error.
 
 Resolution:
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 ## Create-React-App-Lambda
 
 This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:

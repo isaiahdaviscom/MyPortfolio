@@ -3,7 +3,6 @@ import style from './style.module.css';
 import { Col, Row, Container, Nav, Image, NavItem } from "react-bootstrap";
 // import { Link } from 'preact-router/match';
 import Social from "../../components/social-badges";
-import { Link } from "react-router-dom";
 
 
 const Header = () => (

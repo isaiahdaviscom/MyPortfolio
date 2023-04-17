@@ -1,5 +1,5 @@
 # MyPortfolio
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/52700ac9-6f10-4162-b004-4c72cd7bb03d/deploy-status)](https://app.netlify.com/sites/isaiahdavis/deploys)
 - [MyPortfolio](#myportfolio)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 

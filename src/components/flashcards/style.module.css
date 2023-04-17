@@ -1,0 +1,6 @@
+.cardImage {
+  aspect-ratio: 2/1;
+  height: auto;
+  display: block;
+  background-color: #eeeeee;
+}

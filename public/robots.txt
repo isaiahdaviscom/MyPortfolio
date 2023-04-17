@@ -1,0 +1,23 @@
+# google.com international search engine
+User-agent: Googlebot
+
+# bing.com international search engine
+User-agent: bingbot
+
+# duckduckgo.com international privacy search engine
+User-agent: DuckDuckBot
+
+# facebook.com social network
+User-agent: Facebot
+
+# siteimprove bot crawler
+User-agent: SiteimproveBot
+User-agent: SiteimproveBot-Crawler
+
+Disallow:
+
+# disallow all other bots
+User-agent: *
+Disallow: /
+
+Sitemap: http://www.isaiahdavis.com/sitemap.xml

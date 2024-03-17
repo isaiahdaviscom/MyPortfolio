@@ -1,0 +1,56 @@
+{
+	"folders": [
+		{
+			"name": "Project",
+			"path": "./"
+		},
+		{
+			"name": "Public",
+			"path": "./public"
+		},
+		{
+			"name": "Components",
+			"path": "./src/components"
+		},
+		{
+			"name": "Routes",
+			"path": "./src/routes"
+		},
+		{
+			"name": "Content",
+			"path": "./src/content"
+		},
+		{
+			"name": "Crawler",
+			"path": "./src/crawler"
+		},
+		{
+			"name": "Helpers",
+			"path": "./src/helpers"
+		},
+		{
+			"name": "Hooks",
+			"path": "./src/hooks"
+		},
+		{
+			"name": "Stories",
+			"path": "./src/stories"
+		},
+		{
+			"name": "Obsidian",
+			"path": "C:/Users/IBlac/OneDrive/Documents/Obsidian Vault/MyProjects/myportfolio"
+		}
+	],
+	"settings": {
+		"xd.globalEditor": false,
+		"xd.lastPackage": "/c:/Users/IBlac/Desktop/Netlify/myportfolio/design-system",
+		"githubPullRequests.ignoredPullRequestBranches": [
+			"master"
+		],
+		"files.exclude": {
+			"**/node_modules": true,
+			"**/.git": true,
+			"**/.DS_Store": true,
+		}
+	}
+}

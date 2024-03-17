@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Components",
+			"path": "./src/components"
+		},
+		{
+			"name": "Routes",
+			"path": "./src/routes"
+		},
+	],
+	"settings": {
+		"xd.globalEditor": false,
+		"xd.lastPackage": "/c:/Users/IBlac/Desktop/Netlify/myportfolio/design-system",
+		"githubPullRequests.ignoredPullRequestBranches": [
+			"master"
+		]
+	}
+}

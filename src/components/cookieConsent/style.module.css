@@ -1,0 +1,30 @@
+.cookie-consent-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-consent-text {
+  margin-bottom: 1rem;
+}
+
+.cookie-consent-button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.cookie-consent-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

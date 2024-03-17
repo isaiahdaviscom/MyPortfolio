@@ -16,6 +16,22 @@
 			"problemMatcher": [],
 			"label": "serve -s build",
 			"detail": "serve -s build"
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "react-scripts dev"
+		},
+		{
+			"type": "npm",
+			"script": "test",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "npm: test",
+			"detail": "react-scripts test"
 		}
 	]
 }

@@ -13,6 +13,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@netlify/plugin-lighthouse": "^6.0.0",
     "@react-three/fiber": "^8.13.7",
     "bootstrap": "^5.3.1",
     "dompurify": "^3.0.6",

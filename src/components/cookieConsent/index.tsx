@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Modal, Button, Image } from 'react-bootstrap';
-import TabContent from '../cookieConsentTabs';
+// import TabContent from '../cookieConsentTabs';
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(!localStorage.getItem('cookieConsent'));
@@ -47,7 +47,7 @@ const CookieConsent = () => {
           <Modal.Body>
             <h5>Privacy Settings</h5>
             Here you can manage your cookie settings.
-            <TabContent />
+            {/* <TabContent /> */}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseChangeWindow}>Close</Button>

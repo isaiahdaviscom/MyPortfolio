@@ -1,6 +1,6 @@
 // import { h } from 'preact';
 // import { Link } from "react-router-dom";
-import React from 'react';
+// import React from 'react';
 import style from "./style.module.css";
 import posts from "../../posts.json";
 // import { Axios } from "@data-provider/axios";

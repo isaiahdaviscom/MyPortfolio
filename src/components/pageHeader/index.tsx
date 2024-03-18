@@ -38,19 +38,19 @@ const Header = (props: Props) => (
         </Col>
         {/* <div className="my-3 px-0 vr"></div> */}
         {/* <Col className={`${style.search_container} screen-only`} as="section">
-          <Form>
-            <InputGroup>
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="search-icon"
-              />
-              <InputGroup.Text id="search-icon">
-                <img aria-label="Search" width={24} height={24} src='public/vendors/fontawesome/search-solid.svg'/>
-              </InputGroup.Text>
-            </InputGroup>
-          </Form>
+          // <Form>
+          //   <InputGroup>
+          //     <Form.Control
+          //       type="search"
+          //       placeholder="Search"
+          //       aria-label="Search"
+          //       aria-describedby="search-icon"
+          //     />
+          //     <InputGroup.Text id="search-icon">
+          //       <img aria-label="Search" width={24} height={24} src='public/vendors/fontawesome/search-solid.svg'/>
+          //     </InputGroup.Text>
+          //   </InputGroup>
+          // </Form>
         </Col> */}
         {/* <div className="my-3 px-0 vr"></div> */}
         <Social></Social>

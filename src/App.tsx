@@ -1,12 +1,13 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 
 import Home from './routes/home';
-import Blogs from './routes/blogs';
+// import Blogs from './routes/blogs';
 import Contact from './routes/contact';
 import ContactSuccess from './routes/contact-success';
 import NotFoundPage from './routes/notfound';
@@ -15,7 +16,7 @@ import Header from './components/pageHeader';
 import Footer from './components/pageFooter';
 import Projects from "./routes/projects";
 
-import CookieConsent from "./components/cookieConsent";
+// import CookieConsent from "./components/cookieConsent";
 
 // import InstagramStory from './components/InstagramStory';
 // const storyImages = [
@@ -30,27 +31,27 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const carouselRef = useRef<HTMLDivElement>(null);
+  // const carouselRef = useRef<HTMLDivElement>(null);
 
-  const SCROLL_AMOUNT = 285;
+  // const SCROLL_AMOUNT = 285;
 
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: -SCROLL_AMOUNT,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // const scrollLeft = () => {
+  //   if (carouselRef.current) {
+  //     carouselRef.current.scrollBy({
+  //       left: -SCROLL_AMOUNT,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: SCROLL_AMOUNT,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // const scrollRight = () => {
+  //   if (carouselRef.current) {
+  //     carouselRef.current.scrollBy({
+  //       left: SCROLL_AMOUNT,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
   return (
     <>
@@ -60,7 +61,7 @@ export default function App() {
           <Route path="*" element={<Home />} />
           <Route path="/projects" element={<Home />} />
           <Route path="/projects/:id" element={<Projects />} />
-          <Route path="/blogs" element={<Blogs />} />
+          {/* <Route path="/blogs" element={<Blogs />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact-success" element={<ContactSuccess />} />
           <Route path="/404" element={<NotFoundPage />} />

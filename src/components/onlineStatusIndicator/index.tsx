@@ -4,12 +4,12 @@ import style from './style.module.css';
 function OnlineStatusIndicator() {
   const [status, setStatus] = useState('checking');
 
-  const isDST = (date: Date) => {
-    const year = date.getFullYear();
-    const jan = new Date(year, 0, 1).getTimezoneOffset();
-    const jul = new Date(year, 6, 1).getTimezoneOffset();
-    return Math.max(jan, jul) !== date.getTimezoneOffset();
-  }
+  // const isDST = (date: Date) => {
+  //   const year = date.getFullYear();
+  //   const jan = new Date(year, 0, 1).getTimezoneOffset();
+  //   const jul = new Date(year, 6, 1).getTimezoneOffset();
+  //   return Math.max(jan, jul) !== date.getTimezoneOffset();
+  // }
 
   useEffect(() => {
     function updateStatus() {

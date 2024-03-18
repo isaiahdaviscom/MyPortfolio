@@ -1,5 +1,6 @@
 import style from './style.module.css';
-import { Col, Row, Container, Nav, Image, NavItem, Form, InputGroup } from "react-bootstrap";
+// import { Col, Row, Container, Nav, Image, NavItem, Form, InputGroup } from "react-bootstrap";
+import { Col, Row, Container, Nav, Image, NavItem } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import OnlineStatusIndicator from "../onlineStatusIndicator";
 import Social from "../socialBadges";

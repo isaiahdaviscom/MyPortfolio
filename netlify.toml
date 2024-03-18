@@ -4,7 +4,7 @@
   # netlify-lambda builds to this folder AND Netlify reads functions from here
   functions = "built-lambda" 
   # create-react-app builds to this folder, Netlify should serve all these files statically
-  publish = "build" 
+  publish = "dist" 
 [[plugins]]
   # Netlify plugin for running Lighthouse tests
   package = "@netlify/plugin-lighthouse"

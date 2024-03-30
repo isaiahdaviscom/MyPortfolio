@@ -63,7 +63,7 @@ export default function App() {
           <Route path="/projects/:id" element={<Projects />} />
           {/* <Route path="/blogs" element={<Blogs />} /> */}
           <Route path="/contact" element={<Contact />} />
-          <Route path="/contact-success" element={<ContactSuccess />} />
+          <Route path="/contact/success" element={<ContactSuccess />} />
           <Route path="/404" element={<NotFoundPage />} />
         </Routes>
         <div className="container">

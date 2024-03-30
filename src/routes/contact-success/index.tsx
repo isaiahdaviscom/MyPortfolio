@@ -1,6 +1,6 @@
 import style from './style.module.css';
 
-const photographs = () => {
+const ContactSuccess = () => {
 	return (
 		<div className={style.pageContact}>
 			<h1 className={style.pageTitle}>Thanks! I'll be in touch soon.</h1>
@@ -8,4 +8,4 @@ const photographs = () => {
 	);
 };
 
-export default photographs;
+export default ContactSuccess;

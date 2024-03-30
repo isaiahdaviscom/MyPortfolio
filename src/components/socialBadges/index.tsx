@@ -1,4 +1,5 @@
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Social() {
   return (
@@ -37,8 +38,8 @@ function Social() {
         </a>
       </div>
       <div id="email" className="pull-right p-1 d-print-flex">
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           aria-label="Contact Me"
         >
           <img
@@ -48,7 +49,7 @@ function Social() {
             alt="Contact Me"
           />
           <p className="print-only"><em>isaiah.davisx@gmail.com</em></p>
-        </a>
+        </Link>
       </div>
       {/* <a
           href="https://codepen.io/isaiahdaviscom"

@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Form, useNavigate, useSubmit } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import style from "./style.module.css";
 
 
@@ -23,7 +23,7 @@ const Contact = () => {
 					</p>
 					{/* <Form name="contact" method="POST" data-netlify="true" action="/contact/success" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}> */}
 					{/* <Form onSubmit={handleSubmit}> */}
-						<form action="" onSubmit={handleSubmit}>
+					<form action="" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
 							<input type="hidden" name="form-name" value="contact" />
 							<p>
 								<input type="text" name="name" placeholder="Name" required />

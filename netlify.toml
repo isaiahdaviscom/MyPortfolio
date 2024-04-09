@@ -8,3 +8,12 @@
 [[plugins]]
   # Netlify plugin for running Lighthouse tests
   package = "@netlify/plugin-lighthouse"
+# redirect all requests to /api/* to the lambda function
+[[redirects]]
+  from = "/projects/iga*"
+  to = "/projects/iga*"
+  status = 200
+[[redirects]]
+  from = "/projects/sandc/*"
+  to = "/projects/sandc/*"
+  status = 200

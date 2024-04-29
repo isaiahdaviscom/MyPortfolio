@@ -58,7 +58,7 @@ const Contact = () => {
 					</p>
 					<p>Cheers <span role="img" aria-label='Cheers emoji'>🍻</span></p>
 					{/* <Form name="contact" method="POST" data-netlify="true" action="/contact/success" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}> */}
-					<form action="" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
+					<form action="" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
 						<input type="hidden" name="form-name" value="contact" />
 						<input type="text" name="name" placeholder="Name" required />
 						<input type="email" name="email" placeholder="E-Mail" required />

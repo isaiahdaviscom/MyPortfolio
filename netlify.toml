@@ -1,19 +1,29 @@
 [build]
-  # the command you run to build this file
-  command = "yarn build" 
-  # netlify-lambda builds to this folder AND Netlify reads functions from here
-  functions = "built-lambda" 
-  # create-react-app builds to this folder, Netlify should serve all these files statically
-  publish = "dist" 
-[[plugins]]
-  # Netlify plugin for running Lighthouse tests
-  package = "@netlify/plugin-lighthouse"
-# redirect all requests to /api/* to the lambda function
-# [[redirects]]
-#   from = "/projects/iga*"
-#   to = "/projects/iga*"
-#   status = 200
-# [[redirects]]
-#   from = "/projects/sandc/*"
-#   to = "/projects/sandc/*"
-#   status = 200
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.88.1"
+
+[build.processing]
+  skip_processing = ["node_modules/**"]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

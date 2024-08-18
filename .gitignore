@@ -29,3 +29,9 @@ dist-ssr
 *.ai
 *.pdf
 
+# Gatsby
+.cache/
+# public/
+/public
+
+

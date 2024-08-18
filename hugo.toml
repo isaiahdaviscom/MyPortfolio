@@ -1,0 +1,4 @@
+baseURL = 'https://isaiahdavis.com'
+languageCode = 'en-us'
+title = 'Isaiah Davis - My Portfolio'
+theme = 'myPortfolio'

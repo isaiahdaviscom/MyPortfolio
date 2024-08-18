@@ -1,131 +1,163 @@
-# MyPortfolio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/52700ac9-6f10-4162-b004-4c72cd7bb03d/deploy-status)](https://app.netlify.com/sites/isaiahdavis/deploys)
-- [MyPortfolio](#myportfolio)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+# Hugo and Tailwind CSS Project Setup
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- [Hugo and Tailwind CSS Project Setup](#hugo-and-tailwind-css-project-setup)
+  - [Prerequisites](#prerequisites)
+  - [Initialize Hugo](#initialize-hugo)
+  - [Configure Hugo](#configure-hugo)
+    - [Create or Install a Theme](#create-or-install-a-theme)
+    - [Update Configuration](#update-configuration)
+    - [Content Creation](#content-creation)
+  - [Integrate Tailwind CSS](#integrate-tailwind-css)
+    - [Install Dependencies](#install-dependencies)
+    - [Configure Tailwind and PostCSS](#configure-tailwind-and-postcss)
+    - [Add Tailwind to Your CSS](#add-tailwind-to-your-css)
+    - [Build CSS with PostCSS](#build-css-with-postcss)
+    - [Automate During Development](#automate-during-development)
+    - [Link CSS in Hugo Layouts](#link-css-in-hugo-layouts)
+  - [Serve and Build the Site](#serve-and-build-the-site)
+  - [Conclusion](#conclusion)
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+Here's a comprehensive README.md document that compiles all the instructions on how to set up a Hugo project, including how to add a custom theme and integrate Tailwind CSS:
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+This guide provides detailed instructions on how to set up a Hugo static site with Tailwind CSS integrated, directly within an existing project directory.
 
-![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+## Prerequisites
 
-[Design System](https://xd.adobe.com/view/a7af9364-9671-4278-96a0-b5e1b6f3b690-f2fc/)
-[Live Site](https://isaiahdavis.com/)
+Before you start, you need to have Hugo and Node.js (with npm) installed on your system.
 
-<!--
-Testing
-Issue:
-Failed retrieving user account: Unauthorized. Double-check your login status with 'netlify status' or contact support with details of your error.
+- **Hugo**: [Installation Guide](https://gohugo.io/getting-started/installing/)
+- **Node.js and npm**: [Download Page](https://nodejs.org/)
 
-Resolution:
-## Create-React-App-Lambda
+## Initialize Hugo
 
-This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
-
-> ⚠️NOTE: You may not need this project at all. [Netlify Dev](https://github.com/netlify/netlify-dev-plugin) works with `create-react-app` out of the box! Only use `netlify-lambda` if you need a build step for your functions, eg if you want to use Babel or TypeScript ([see its README for details](https://github.com/netlify/netlify-lambda/blob/master/README.md#netlify-lambda)).
-
-## Project Setup
-
-**Source**: The main addition to base Create-React-App is a new folder: `src/lambda`. This folder is specified and can be changed in the `package.json` script: `"build:lambda": "netlify-lambda build src/lambda"`.
-
-**Dist**: Each JavaScript file in there will be built for Netlify Function deployment in `/built-lambda`, specified in [`netlify.toml`](https://www.netlify.com/docs/netlify-toml-reference/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex).
-
-As an example, we've included a small `src/lambda/hello.js` function, which will be deployed to `/.netlify/functions/hello`. We've also included an async lambda example using async/await syntax in `async-dadjoke.js`.
-
-## Video
-
-Learn how to set this up yourself (and why everything is the way it is) from scratch in a video: https://www.youtube.com/watch?v=3ldSM98nCHI
-
-## Babel/webpack compilation
-
-All functions (inside `src/lambda`) are compiled with webpack using Babel, so you can use modern JavaScript, import npm modules, etc., without any extra setup.
-
-## Local Development
+Navigate to your project directory and initialize a new Hugo site. This command will also force Hugo to create a new site even if files are already present in the directory.
 
 ```bash
-## prep steps for first time users
-npm i -g netlify-cli # Make sure you have the [Netlify CLI](https://github.com/netlify/cli) installed
-git clone https://github.com/netlify/create-react-app-lambda ## clone this repo
-cd create-react-app-lambda ## change into this repo
-yarn # install all dependencies
-
-## done every time you start up this project
-ntl dev ## nice shortcut for `netlify dev`, starts up create-react-app AND a local Node.js server for your Netlify functions
+hugo new site . --force
 ```
 
-This fires up [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta), which:
+**Congratulations!** Your new Hugo site is now created in your current project directory.
 
-- Detects that you are running a `create-react-app` project and runs the npm script that contains `react-scripts start`, which in this project is the `start` script
-- Detects that you use `netlify-lambda` as a [function builder](https://github.com/netlify/netlify-dev-plugin/#function-builders-function-builder-detection-and-relationship-with-netlify-lambda), and runs the npm script that contains `netlify-lambda build`, which in this project is the `build:lambda` script.
+## Configure Hugo
 
-You can view the project locally via Netlify Dev, via `localhost:8888`.
+### Create or Install a Theme
 
-Each function will be available at the same port as well:
+- **Create a custom theme**:
 
-- `http://localhost:8888/.netlify/functions/hello` and 
-- `http://localhost:8888/.netlify/functions/async-dadjoke`
+  ```bash
+  hugo new theme <THEMENAME>
+  ```
 
-## Deployment
+  Replace `<THEMENAME>` with your desired theme name.
 
-During deployment, this project is configured, inside `netlify.toml` to run the build `command`: `yarn build`.
+- **Install a theme from Hugo themes gallery**:
+  [Hugo Themes](https://themes.gohugo.io/)
 
-`yarn build` corresponds to the npm script `build`, which uses `npm-run-all` (aka `run-p`) to concurrently run `"build:app"` (aka `react-scripts build`) and `build:lambda` (aka `netlify-lambda build src/lambda`).
+### Update Configuration
 
-## Typescript
+Set the theme in the `config.toml` file:
 
-<details>
-  <summary>
-    <b id="typescript">Click for instructions</b>
-  </summary>
-
-You can use Typescript in both your frontend React code (with `react-scripts` v2.1+) and your serverless functions (with `netlify-lambda` v1.1+). Follow these instructions:
-
-1. `yarn add -D typescript @types/node @types/react @types/react-dom @babel/preset-typescript @types/aws-lambda`
-2. convert `src/lambda/hello.js` to `src/lambda/hello.ts`
-3. use types in your event handler:
-
-```ts
-import { Handler, Context, Callback, APIGatewayEvent } from 'aws-lambda'
-
-interface HelloResponse {
-  statusCode: number
-  body: string
-}
-
-const handler: Handler = (event: APIGatewayEvent, context: Context, callback: Callback) => {
-  const params = event.queryStringParameters
-  const response: HelloResponse = {
-    statusCode: 200,
-    body: JSON.stringify({
-      msg: `Hello world ${Math.floor(Math.random() * 10)}`,
-      params,
-    }),
-  }
-
-  callback(undefined, response)
-}
-
-export { handler }
+```toml
+theme = "<THEMENAME>"
 ```
 
-rerun and see it work!
+### Content Creation
 
-You are free to set up your `tsconfig.json` and `tslint` as you see fit.
+Create new content by specifying the section and filename:
 
-</details>
+```bash
+hugo new content/<SECTIONNAME>/<FILENAME>.<FORMAT>
+```
 
-**If you want to try working in Typescript on the client and lambda side**: There are a bunch of small setup details to get right. Check https://github.com/sw-yx/create-react-app-lambda-typescript for a working starter.
+## Integrate Tailwind CSS
 
-## Routing and authentication with Netlify Identity
+### Install Dependencies
 
-For a full demo of routing and authentication, check this branch: https://github.com/netlify/create-react-app-lambda/pull/18 This example will not be maintained but may be helpful.
+Install Tailwind CSS and its peer dependencies:
 
-## Service Worker
+```bash
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+```
 
-`create-react-app`'s default service worker (in `src/index.js`) does not work with lambda functions out of the box. It prevents calling the function and returns the app itself instead ([Read more](https://github.com/facebook/create-react-app/issues/2237#issuecomment-302693219)). To solve this you have to eject and enhance the service worker configuration in the webpack config. Whitelist the path of your lambda function and you are good to go.
+### Configure Tailwind and PostCSS
 
--->
+Generate the Tailwind and PostCSS configuration files:
+
+```bash
+npx tailwindcss init -p
+```
+
+Configure PurgeCSS in `tailwind.config.js` to remove unused styles:
+
+```javascript
+module.exports = {
+  purge: ['./layouts/**/*.html', './content/**/*.md'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### Add Tailwind to Your CSS
+
+Create a CSS file at `assets/css/styles.css` and include Tailwind's directives:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Build CSS with PostCSS
+
+Update `package.json` to add scripts for building CSS:
+
+```json
+"scripts": {
+  "build:css": "postcss assets/css/styles.css -o static/css/styles.css",
+  "watch:css": "postcss assets/css/styles.css -o static/css/styles.css --watch"
+}
+```
+
+Build the CSS:
+
+```bash
+npm run build:css
+```
+
+### Automate During Development
+
+Automatically rebuild CSS on changes:
+
+```bash
+npm run watch:css
+```
+
+### Link CSS in Hugo Layouts
+
+Include the compiled CSS in your layouts:
+
+```html
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
+```
+
+## Serve and Build the Site
+
+Serve your site locally with Hugo's built-in server, which supports live reloading:
+
+```bash
+hugo server --buildDrafts
+```
+
+Build your site to generate the static files:
+
+```bash
+hugo
+```
+
+## Conclusion
+
+You now have a Hugo site integrated with Tailwind CSS ready for development. For more information on customization and advanced configurations, refer to the [Hugo documentation](https://gohugo.io/documentation/) and the [Tailwind CSS documentation](https://tailwindcss.com/docs).
+
+This README.md document serves as a complete guide to setting up a Hugo project with Tailwind CSS, tailored for rapid development and easy deployment. It covers every step from initial setup to development and build processes.

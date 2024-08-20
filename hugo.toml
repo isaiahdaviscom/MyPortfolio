@@ -2,3 +2,15 @@ baseURL = 'https://isaiahdavis.com'
 languageCode = 'en-us'
 title = 'Isaiah Davis - My Portfolio'
 theme = 'myPortfolio'
+
+[params]
+  author = "Isaiah Davis"
+  description = "My portfolio website"
+
+[build]
+  publishDir = "public"
+
+[deploy]
+  [[deploy.targets]]
+    name = "Netlify"
+    URL = "https://api.netlify.com/build_hooks/your-build-hook-url"
